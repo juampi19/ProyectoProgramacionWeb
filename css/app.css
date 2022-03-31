@@ -1,6 +1,9 @@
 :root {
     --fontHeading: 'Playfair Display', serif;
     --principalFont: 'Raleway', sans-serif;
+    --bs-green: #8CBC00;
+    --bs-green2: #65A15A;
+    --bs-green3: #8CBC00;
 }
 
 html {
@@ -17,4 +20,73 @@ html {
 body {
     font-size: 1.6rem;
     line-height: 2;
+}
+
+h1, 
+h2, 
+h3 {
+    font-family: var(--fontHeading);
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 3rem;
+
+    }
+}
+
+.carousel img {
+    height: 50rem;
+}
+
+@media (min-width: 768px) {
+   .carousel img {
+        height: 45rem;
+    }
+}
+
+
+/*Colores*/
+.text-primary {
+    color: var(--bs-green2)!important;
+}
+
+.btn-primary {
+    background-color: var(--bs-green2)!important;
+    border:none!important;
+}
+
+.bg-primary {
+    background-color: var(--bs-green2)!important;
+}
+
+
+
+/*Navegacion*/
+.navegacion a:hover{
+    color: var(--bs-green2)!important;
+}
+
+
+/*buscador*/
+.input {
+   position: relative;
+}
+
+.input input {
+  width: 24rem;
+  height: 3.2rem;
+  font-size: 1.8rem;
+  transition-property: width;
+  transition-duration: .3s;
+  border-radius: 1rem;  
+  
+}
+
+.input input:focus {
+    width: 24rem;
 }
