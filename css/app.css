@@ -3,9 +3,10 @@
     --principalFont: 'Raleway', sans-serif;
     --bs-green: #8CBC00;
     --bs-green2: #65A15A;
-    --bs-green3: #8CBC00;
+    --gris: #e1e1e1;
 }
 
+/*globales*/
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -20,6 +21,7 @@ html {
 body {
     font-size: 1.6rem;
     line-height: 2;
+    font-family: var(--principalFont);
 }
 
 h1, 
@@ -29,16 +31,28 @@ h3 {
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 @media (min-width: 768px) {
     h2 {
-        font-size: 3rem;
+        font-size: 3.3rem;
 
     }
 }
 
+h3 {
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+    h3 {
+        font-size: 2.9rem;
+    }
+}
+
+
+/*carrusel*/
 .carousel img {
     height: 50rem;
 }
@@ -82,11 +96,29 @@ h2 {
   height: 3.2rem;
   font-size: 1.8rem;
   transition-property: width;
-  transition-duration: .3s;
-  border-radius: 1rem;  
-  
+  transition-duration: .3s;  
 }
 
 .input input:focus {
     width: 24rem;
+}
+
+/*card*/
+.bg-card {
+    background-color: var(--gris);
+}
+
+/*productos*/
+.producto {
+    margin-bottom: 1rem;
+}
+
+/*categorias*/
+.categoria img {
+    transition-property: transform;
+    transition-duration: .3s;
+}
+
+.categoria img:hover {
+    transform: scale(1.2);
 }
