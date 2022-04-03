@@ -51,28 +51,6 @@ h3 {
     }
 }
 
-form {
-    color: #555;
-    display: flex;
-    padding: 2px;
-    border: 1px solid currentColor;
-    border-radius: 5px;
-  }
-
-
-button[type="submit"] {
-    text-indent: -999px;
-    overflow: hidden;
-    width: 40px;
-    padding: 0;
-    margin: 0;
-    border: 1px solid transparent;
-    border-radius: inherit;
-    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
-    cursor: pointer;
-    opacity: 0.7;
-}
-
 /*carrusel*/
 .carousel img {
     height: 50rem;
@@ -108,25 +86,45 @@ button[type="submit"] {
 
 
 /*buscador*/
+
 .input {
-   position: relative;
-   all: unset;
-   
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    background: none;
+    border: 4px solid var(--bs-green);
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-family: Comic Sans MS;
+    font-size: 26px;
+    color: #000000;
+    outline: none;
+    transition: .5s;
 }
 
-.input input {
-  max-width: 24rem;
-  height: 3.2rem;
-  font-size: 1.8rem;
-  transition-property: width;
-  transition-duration: .3s;  
-}
-
-.input input:focus {
-    width: 24rem;
+.box {   
+    transform: translate(0%,0%);
 }
 
 
+.box:hover input{
+    width: 350px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+i{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(-50%,-50%);
+    font-size: 26px;
+    color: #524E4E;
+    transition: .2s;
+}
+.box:hover i{
+    opacity: 0;
+    z-index: -1;
+}
 
 /*card*/
 .bg-card {
