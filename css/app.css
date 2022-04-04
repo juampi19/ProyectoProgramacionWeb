@@ -43,6 +43,7 @@ h2 {
 
 h3 {
     font-size: 2rem;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -53,7 +54,7 @@ h3 {
 
 /*carrusel*/
 .carousel img {
-    height: 50rem;
+    height: 30rem;
 }
 
 @media (min-width: 768px) {
@@ -180,4 +181,82 @@ i{
     font-size: 1.8rem;
     color: var(--blanco);
     
+}
+
+/*servicos*/
+.servicios {
+    padding: 5rem 0;
+}
+
+@media (min-width: 768px) {
+    .servicios {
+        padding: 8rem;
+    }
+}
+
+.servicios h2 {
+    margin-bottom: 8rem;
+}
+.servicios-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .servicios-grid {
+        flex-direction: row;
+        max-width: 88rem;
+        margin: 0 auto;
+    }
+}
+
+.servicio {
+    flex-grow: 1;
+    background-color: var(--bs-green2);
+    border: 1px solid var(--gris);
+    border-radius: 1rem;
+    padding: 16rem 4rem 4rem;
+    background-size: 10rem;
+    background-repeat: no-repeat;
+    background-position: 50% 2rem;
+}
+
+@media (min-width: 768px) {
+    .servicio {
+        padding: 16rem 2rem 4rem;
+        
+    }
+
+    .servicio:hover {
+        transform: scale(1.1);
+    }
+}
+
+.servicio p {
+    text-align: center;
+    margin: 1rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.empaque {
+    background-image: url(../img/servicio1.png);
+}
+
+.calidad {
+    background-image: url(../img/servicio3.png);
+}
+
+@media (min-width: 768px) {
+    .calidad {
+        margin-top: -5rem;
+        margin-bottom: -5rem;
+        background-position: 50% 7rem;
+        padding-top: 21rem;
+        z-index: 2;
+    }
+}
+
+.tiempo {
+    background-image: url(../img/servicio2.png);
 }
