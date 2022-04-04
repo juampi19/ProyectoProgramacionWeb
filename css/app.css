@@ -86,7 +86,6 @@ h3 {
 
 
 /*buscador*/
-
 .input {
     padding: 10px;
     width: 80px;
@@ -95,11 +94,11 @@ h3 {
     border: 4px solid var(--bs-green);
     border-radius: 50px;
     box-sizing: border-box;
-    font-family: Comic Sans MS;
+    font-family: var(--principalFont);
     font-size: 26px;
     color: #000000;
     outline: none;
-    transition: .5s;
+    transition: .6s;
 }
 
 .box {   
@@ -144,4 +143,41 @@ i{
 
 .categoria img:hover {
     transform: scale(1.2);
+}
+
+/** FOOTER **/
+
+.footer {
+    background-color: var(--gris);
+    padding-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .barra-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 8rem;
+        margin-left: 8rem;
+    }
+}
+
+.nav-footer {
+    font-size: 2.3rem;
+}
+
+@media (min-width: 768px) {
+    .nav-footer {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.nav-footer__enlace {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+    
 }
