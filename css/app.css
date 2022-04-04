@@ -136,6 +136,23 @@ i{
     margin-bottom: 1rem;
 }
 
+.producto img {
+    height: 50rem;
+}
+
+@media (min-width: 768px) {
+    .producto img {
+        height: 40rem;
+    }
+
+    .producto .card-body  {
+        height: 25rem;
+    }
+
+    .producto h3 {
+        margin-top: 3rem;
+    }
+}
 /*categorias*/
 .categoria img {
     transition-property: transform;
@@ -146,11 +163,15 @@ i{
     transform: scale(1.2);
 }
 
+.categorias {
+    margin-bottom: 3rem;
+}
+
 /** FOOTER **/
 
 .footer {
     background-color: var(--gris);
-    padding-bottom: 3rem;
+    padding: 2rem 0;
     margin-top: 3rem;
 }
 
@@ -159,8 +180,6 @@ i{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-right: 8rem;
-        margin-left: 8rem;
     }
 }
 
@@ -182,6 +201,11 @@ i{
     color: var(--blanco);
     
 }
+.copyright {
+    border-top: 1.8px solid var(--bs-green2);
+    font-weight: 700;
+    padding: 1rem;
+}
 
 /*servicos*/
 .servicios {
@@ -190,12 +214,18 @@ i{
 
 @media (min-width: 768px) {
     .servicios {
-        padding: 8rem;
+        padding: 7rem;
     }
 }
 
 .servicios h2 {
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+    .servicios h2 {
+        margin-bottom: 10rem;
+    }
 }
 .servicios-grid {
     display: flex;
@@ -224,6 +254,8 @@ i{
 @media (min-width: 768px) {
     .servicio {
         padding: 16rem 2rem 4rem;
+        transition-property: transform;
+        transition-duration: .3s;
         
     }
 
