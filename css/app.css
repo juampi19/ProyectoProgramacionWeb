@@ -70,8 +70,7 @@ h3 {
 }
 
 .btn-primary {
-    background-color: var(--bs-green2)!important;
-    border:none!important;
+
 }
 
 .bg-primary {
@@ -125,6 +124,29 @@ i{
     opacity: 0;
     z-index: -1;
 }
+
+
+/** Login y carrito de compra **/
+
+@media (min-width: 768px) {
+    .contenedor-login {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+.contenedor-login {
+    display: flex;
+    gap: 4rem;
+}
+
+.btn-icon {
+    background-color: var(--blanco);
+    border: none;
+}
+
 
 /*card*/
 .bg-card {
