@@ -147,6 +147,15 @@ i{
     border: none;
 }
 
+.logo {
+    margin-bottom: 1rem;
+}
+@media(min-width:768px) {
+    .logo {
+        margin-bottom: 0;
+    }
+}
+
 
 /*card*/
 .bg-card {
