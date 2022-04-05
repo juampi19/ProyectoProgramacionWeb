@@ -237,12 +237,12 @@ i{
     .servicios-grid {
         flex-direction: row;
         max-width: 88rem;
-        margin: 0 auto;
+        margin-inline:auto;
     }
 }
 
 .servicio {
-    flex-grow: 1;
+    flex: 1;
     background-color: var(--bs-green2);
     border: 1px solid var(--gris);
     border-radius: 1rem;
