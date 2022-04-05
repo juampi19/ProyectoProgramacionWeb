@@ -70,7 +70,7 @@ h3 {
 }
 
 .btn-primary {
-
+    background-color: var(--bs-green2)!important;
 }
 
 .bg-primary {
@@ -159,7 +159,7 @@ i{
 }
 
 .producto img {
-    height: 50rem;
+    height: 30rem;
 }
 
 @media (min-width: 768px) {
