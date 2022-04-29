@@ -4,6 +4,7 @@
     --bs-green: #8CBC00;
     --bs-green2: #65A15A;
     --gris: #e1e1e1;
+    --negro: #000000;
 }
 
 /*globales*/
@@ -88,8 +89,8 @@ h3 {
 /*buscador*/
 .input {
     padding: 10px;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     background: none;
     border: 4px solid var(--bs-green);
     border-radius: 50px;
@@ -107,16 +108,16 @@ h3 {
 
 
 .box:hover input{
-    width: 30rem;
+    width: 35rem;
     background: #FFFFFF;
     border-radius: 10px;
 }
 i{
     position: absolute;
     top: 50%;
-    right: 15px;
+    right: 8px;
     transform: translate(-50%,-50%);
-    font-size: 26px;
+    font-size: 18px;
     color: #524E4E;
     transition: .2s;
 }
@@ -314,4 +315,50 @@ i{
 
 .tiempo {
     background-image: url(../img/servicio2.png);
+}
+
+
+/*Galeria*/
+
+.galeria .card {
+    border-radius: 4rem !important;
+}
+
+.galeria .card img{
+    height: 23rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.btnGaleria {
+    height: 5rem;
+    text-align: center;
+    padding: 1rem 5rem;
+    text-decoration: none;
+    color: var(--negro);
+    font-weight: 700;
+    border-radius: 4rem;
+    transition: background-color .3s ease-in-out;
+}
+
+.btnGaleria:hover {
+    background-color: var(--bs-green2);
+    color: var(--gris);
+}
+
+.paginacion {
+    border-radius: 50%;
+    background-color: var(--negro);
+    color: var(--gris);
+    font-size: 1.8rem;
+    font-weight: 700;
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    text-decoration: none;  
+    transition: color .3s ease-in-out;
+}
+
+.paginacion:hover {
+    color: var(--bs-green2);
 }
