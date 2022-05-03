@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap');
+
 :root {
-    --fontHeading: 'Playfair Display', serif;
-    --principalFont: 'Raleway', sans-serif;
+    --fontHeading: 'Kaisei Tokumin', serif;
+    --principalFont: 'Poppins', sans-serif;
     --bs-green: #8CBC00;
     --bs-green2: #65A15A;
     --gris: #e1e1e1;
@@ -9,7 +11,7 @@
 
 /*globales*/
 html {
-    font-size: 62.5%;
+    font-size: 62.5% !important;
     box-sizing: border-box;
 }
 
@@ -20,7 +22,7 @@ html {
 }
 
 body {
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
     line-height: 2;
     font-family: var(--principalFont);
 }
@@ -52,6 +54,39 @@ h3 {
         font-size: 2.9rem;
     }
 }
+
+.btn-agregar {
+    border-radius: 2rem;
+    border: 1px solid var(--negro);
+    color: rgb(85, 85, 85);
+    display: inline-block;
+    font-weight: 700;
+    padding: 1rem 2.8rem;
+    text-decoration: none;
+    
+}
+
+.btn-agregar:hover {
+    color: var(--gris);
+    background-color: var(--bs-green2);
+    border-color: var(--bs-green2);
+}
+
+/*hero*/
+.hero {
+    background-image: linear-gradient( rgb( 0 0 0/50% ) 0%, rgb( 0 0 0/50% ) 100% ), url( ../img/hover-imagen.jpg );
+    height: 100vh;
+    background-position: center center;
+}
+
+.hero-heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+
 
 /*carrusel*/
 .carousel img {
@@ -150,9 +185,6 @@ i{
 
 
 /*card*/
-.bg-card {
-    background-color: var(--gris);
-}
 
 /*productos*/
 .producto {
@@ -319,7 +351,6 @@ i{
 
 
 /*Galeria*/
-
 .galeria .card {
     border-radius: 4rem !important;
     

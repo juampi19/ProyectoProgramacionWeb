@@ -1,14 +1,14 @@
 const galeriaDiv = document.querySelector( '#app' );
 const paginacionDiv = document.querySelector( '#paginacion' );
 
-//Variables
+//Variables para crear el paginador
 const registroPorPagina = 32;
 let totalPaginador;
 let iterador;
 let paginaActual = 1;
 
 
-//Funcion para hacer la consulta a la API
+//Funcion para consultar la API
 export const consultarImagenes = () => {
 
     let termino = 'plantas';
@@ -19,7 +19,7 @@ export const consultarImagenes = () => {
     fetch( urlImagenes )
         .then( response => response.json() )
         .then( resolve => {
-            totalPaginador = calcularPaginador( resolve.totalHits ); //Obtenemos la cantidad de paginaciones
+            totalPaginador = calcularPaginador( resolve.totalHits ); //Obtenemos la cantidad de elementos
             mostrarImagenes( resolve.hits );
         } );
 }
