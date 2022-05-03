@@ -15,7 +15,7 @@ window.onload = () => {
 }
 
 //Funcion para hacer la consulta a la API
-const consultarImagenes = () => {
+export const consultarImagenes = () => {
 
     let termino = 'plantas';
     const apiKey = '26055449-b413bea04546b8c11c8233c58';

@@ -322,12 +322,14 @@ i{
 
 .galeria .card {
     border-radius: 4rem !important;
+    
 }
 
 .galeria .card img{
     height: 23rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    
 }
 
 .btnGaleria {
