@@ -1,2 +1,8 @@
 # ProyectoProgramacionWeb
-https://www.planetahuerto.es/tienda-jardin-y-exterior ejemplo
+Aplicación web con django y js.
+
+
+
+###Recusos
+-API PRODUCTOS: https://github.com/juampi19/ProductosAPI
+-SERVIDOR DESDE HEROKU: https://productos-api-rest.herokuapp.com/productos
