@@ -3,6 +3,9 @@ Aplicación web con django y js.
 
 
 
-###Recusos
--API PRODUCTOS: https://github.com/juampi19/ProductosAPI
+### Recursos
+´´´
+-API PRODUCTOS REPOSITORIO: https://github.com/juampi19/ProductosAPI
 -SERVIDOR DESDE HEROKU: https://productos-api-rest.herokuapp.com/productos
+-https://green-wood.netlify.app/
+´´´
