@@ -3,7 +3,6 @@
 :root {
     --fontHeading: 'Kaisei Tokumin', serif;
     --principalFont: 'Poppins', sans-serif;
-    --bs-green: #8CBC00;
     --bs-green2: #65A15A;
     --gris: #e1e1e1;
     --negro: #000000;
@@ -22,7 +21,7 @@ html {
 }
 
 body {
-    font-size: 1.6rem !important;
+    font-size: 18px !important;
     line-height: 2;
     font-family: var(--principalFont);
 }
@@ -55,21 +54,59 @@ h3 {
     }
 }
 
+.titulo h2::before {
+    position: absolute;
+    background-color: var(--bs-green2);
+    content: '';
+    width: .4rem;
+    height: 5rem;
+    top: -9%;
+    left: -2rem;
+
+}
+
+button,
+p,
+input {
+    font-size: 1.6rem !important;
+}
+
+/*Boton*/
+
 .btn-agregar {
     border-radius: 2rem;
     border: 1px solid var(--negro);
     color: rgb(85, 85, 85);
     display: inline-block;
-    font-weight: 700;
+    font-weight: 400;
+    font-size: 1.5rem;
     padding: 1rem 2.8rem;
     text-decoration: none;
     
+}
+
+.btn-agregar-negro {
+    color: var(--negro);
 }
 
 .btn-agregar:hover {
     color: var(--gris);
     background-color: var(--bs-green2);
     border-color: var(--bs-green2);
+}
+
+/*escalado*/
+.escalado img {
+    transition-property: transform;
+    transition-duration: .3s;
+}
+
+.escalado img:hover {
+    transform: scale(1.2);
+}
+
+.escalado {
+    margin-bottom: 3rem;
 }
 
 /*hero*/
@@ -86,7 +123,32 @@ h3 {
     text-transform: uppercase;
 }
 
+/*Producto*/
+.productos {
+    display: grid;
+    grid-template-columns: repeat( 6, 30rem );
+    column-gap: 4rem;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
 
+@media( min-width:768px ) {
+    .productos {
+        grid-template-columns: repeat( 2, 1fr );
+        overflow-x: hidden;
+    }
+}
+
+@media( min-width:992px ) {
+    .productos {
+        grid-template-columns: repeat( 3, 1fr );
+    }
+}
+
+.producto {
+    scroll-snap-align: start;
+}
 
 /*carrusel*/
 .carousel img {
@@ -162,28 +224,6 @@ i{
 }
 
 
-/** Login y carrito de compra **/
-
-@media (min-width: 768px) {
-    .contenedor-login {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;
-    }
-}
-
-.contenedor-login {
-    display: flex;
-    gap: 4rem;
-}
-
-.btn-icon {
-    background-color: var(--blanco);
-    border: none;
-}
-
-
 /*card*/
 
 /*productos*/
@@ -208,19 +248,7 @@ i{
         margin-top: 3rem;
     }
 }
-/*categorias*/
-.categoria img {
-    transition-property: transform;
-    transition-duration: .3s;
-}
 
-.categoria img:hover {
-    transform: scale(1.2);
-}
-
-.categorias {
-    margin-bottom: 3rem;
-}
 
 /** FOOTER **/
 
@@ -363,7 +391,7 @@ i{
     
 }
 
-.btnGaleria {
+.btn-all {
     height: 5rem;
     text-align: center;
     padding: 1rem 5rem;
@@ -372,17 +400,18 @@ i{
     font-weight: 700;
     border-radius: 4rem;
     transition: background-color .3s ease-in-out;
+    border: none;
 }
 
-.btnGaleria:hover {
+.btn-all:hover {
     background-color: var(--bs-green2);
     color: var(--gris);
 }
 
 .paginacion {
     border-radius: 50%;
-    background-color: var(--negro);
-    color: var(--gris);
+    background-color: #FFFFFF;
+    color: var(--negro);
     font-size: 1.8rem;
     font-weight: 700;
     width: 4rem;
@@ -390,8 +419,10 @@ i{
     text-align: center;
     text-decoration: none;  
     transition: color .3s ease-in-out;
+    border: 2px solid var(--gris);
 }
 
 .paginacion:hover {
-    color: var(--bs-green2);
+    color: var(--negro);
+    background-color: var(--bs-green2);
 }

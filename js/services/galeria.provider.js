@@ -1,3 +1,4 @@
+
 const galeriaDiv = document.querySelector( '#app' );
 const paginacionDiv = document.querySelector( '#paginacion' );
 
@@ -7,14 +8,17 @@ let totalPaginador;
 let iterador;
 let paginaActual = 1;
 
+document.addEventListener( 'DOMContentLoaded', () => {
+    consultarImagenes();
+} );
 
 //Funcion para consultar la API
-export const consultarImagenes = () => {
+const consultarImagenes = () => {
 
     let termino = 'plantas';
     const apiKey = '26055449-b413bea04546b8c11c8233c58';
     const urlImagenes = `https://pixabay.com/api/?key=${apiKey}&q=${termino}&per_page=${registroPorPagina}&page=${paginaActual}`;
-
+    
     
     fetch( urlImagenes )
         .then( response => response.json() )
@@ -37,7 +41,6 @@ function *crearPaginador( total ) {
 }
 
 
-
 //Creamos el html para mostrar las imagenes
 const mostrarImagenes = ( imagenes ) => {
 
@@ -58,7 +61,7 @@ const mostrarImagenes = ( imagenes ) => {
                     <p class="card-text fw-bold">Autor: <span class="fw-light">${ user }</span></p>
                     <p class="card-text fw-bold">Likes: <span class="fw-light">${ likes }</span></p>
                     <p class="card-text fw-bold">Veces Vista: <span class="fw-light">${ views }</span></p>
-                    <a href="${ largeImageURL }" target="_blank" class="btnGaleria">Ver Imagen</a>
+                    <a href="${ largeImageURL }" target="_blank" class="btn-all">Ver Imagen</a>
                 </div>
             </div>
         `;

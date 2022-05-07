@@ -1,8 +1,8 @@
-import { consultarImagenes } from "./services/galeria.provider.js";
+import { buscarProductos } from "./services/productos.provider.js";
 
 
 const initApp = () => {
-    consultarImagenes();
+    buscarProductos();
 }
 
 document.addEventListener( 'DOMContentLoaded', () => {
