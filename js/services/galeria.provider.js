@@ -48,7 +48,7 @@ const mostrarImagenes = ( imagenes ) => {
     limpiarHtml();
 
     imagenes.forEach( imagen => {
-        //Desestructuring del objeto
+        //Destructuring del objeto
         const { previewURL, largeImageURL, user, likes, views } = imagen;
 
         //Creamos el html de las imagenes
