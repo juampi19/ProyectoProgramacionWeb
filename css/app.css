@@ -293,7 +293,8 @@ p {
 
 /* footer */
 .footer {
-    background-color: var(--gris);
+    background-color: #21232A;
+    color: #FFFFFF;
     margin-top: 3rem;
     padding: 2rem 0;
 }
@@ -317,11 +318,11 @@ p {
     }
 }
 
-.nav-footer__enlace {
+.nav-footer a {
     display: block;
     text-align: center;
     font-size: 1.8rem;
-    color: var(--blanco);
+    color: #FFFFFF;
     
 }
 .copyright {
