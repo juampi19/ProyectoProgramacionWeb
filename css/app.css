@@ -362,6 +362,13 @@ p {
     color: var(--gris);
 }
 
+.btn-all-mod {
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    height: 4rem;
+    padding: .8rem 3rem;     
+}
+
 .paginacion {
     border-radius: 50%;
     background-color: #FFFFFF;
@@ -385,7 +392,7 @@ p {
 /*Formulario*/
 .form-main {
     background: var(--bs-green2);
-    background: linear-gradient( to right, #e1e1e1, #65A15A );
+    background: linear-gradient( to right, #e1e1e1, #179700d1 );
     
 }
 
@@ -399,7 +406,7 @@ p {
 
 
 .form-bg {
-    background-image: url( '../img/form-bg2.jpg' );
+    background-image: url( '../img/bg-form3.jpg' );
     background-size: cover;
     background-position: center left;
 }
