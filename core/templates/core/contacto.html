@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green-World - Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'core/css/app.css'%}">
+    <script defer src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 sticky-top shadow">
+        <div class = "container-xl d-flex flex-column flex-md-row gap-4 justify-content-center justify-content-md-evenly">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "index.html">
+                <img class="img-fluid" src="{% static 'core/img/logo.png'%}" alt="imagen logo">
+            </a>
+
+            <div class = "order-lg-2 nav-btns d-flex gap-5 ms-5 ms-md-0">
+                <button type = "button" class = "btn position-relative">
+                    <i class="bi bi-person-circle"></i>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <i class = "fa fa-shopping-cart"></i>
+                </button>
+                
+                <button type = "button" class = "btn position-relative">
+                    <i class = "fa fa-search"></i>
+                </button>
+            </div>
+
+            <button class = "navbar-toggler border-0 mt-2 mt-md-0 mx-auto mx-md-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse order-lg-1 navegacion" id = "navMenu">
+                <ul class = "navbar-nav mx-auto text-center">
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href ="index.html">Inicio</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href ="">Nosotros</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href ="tienda.html">Tienda</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href ="galeria.html">Galeria</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href ="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div><!--container-->
+    </nav><!--navbar-->
+
+
+
+    <main class="container-xl py-5">
+        <div class = "titulo text-center my-5">
+            <h2 class = "position-relative d-inline-block">Contactanos</h2>
+        </div>
+    
+        <div class="row justify-content-center mt-5">
+            <form action="#" class="col-md-8 needs-validation formulario" novalidate>
+                <fieldset>
+                    <legend class="bg-primary text-white text-center text-uppercase fs-4 fw-bold">Tus Datos</legend>
+    
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text"  id="nombre" class="form-control" placeholder="Tu Nombre" required>
+                        <span class="invalid-feedback">Debes ingresar un nombre</span>
+                        <span class="valid-feedback">!Todo Correcto¡</span>
+                    </div>
+    
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email"  id="email" class="form-control" placeholder="Tu Email" required>
+                        <span class="invalid-feedback">Debes ingresar un email valido</span>
+                        <span class="valid-feedback">!Todo Correcto¡</span>
+                    </div>
+    
+                    <div class="mb-3">
+                        <label for="tel" class="form-label">Teléfono:</label>
+                        <input type="tel"  id="tel" class="form-control" placeholder="Tu Teléfono" required minlength="9">
+                        <span class="invalid-feedback">Debes ingresar un telefono valido</span>
+                        <span class="valid-feedback">!Todo Correcto¡</span>
+                    </div>
+    
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje:</label>
+                        <textarea id="mensaje" class="form-control" rows="10" required minlength="10"></textarea>
+                        <span class="invalid-feedback">Debes mandar un mensaje</span>
+                        <span class="valid-feedback">!Todo Correcto¡</span>
+                        
+                    </div>  
+                </fieldset><!--campos-->
+                    
+    
+                <div class="my-5 d-grid d-lg-flex justify-content-lg-center">
+                    <button class="btn-all fw-normal fs-3" type="submit">Enviar</button>
+                </div>
+               
+            </form>
+        </div>
+       
+    </main>
+
+    <footer class="footer">
+        <div class="container-xl">
+            <div class="barra-footer">
+                <div class="logo">
+                    <a href="index.html">
+                        <img class="img-fluid" src="{% static 'core/img/logo2.png'%}" alt="imagen logo">
+                    </a>
+                </div>
+    
+                <nav class="nav-footer">
+                    <a class="text-decoration-none fw-bold" href="index.html">Inicio</a>
+                    <a class="text-decoration-none fw-bold" href="nosotros.html">Nosotros</a>
+                    <a class="text-decoration-none fw-bold" href="tienda.html">Tienda</a>
+                    <a class="text-decoration-none fw-bold" href="galeria.html">Galería</a>
+                </nav>
+            </div>
+    
+            <p class="copyright mt-3 text-center">GreenWood - Todos los Derechos Reservados &copy;</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="{% static 'core/js/main.js'%}" type="module"></script>
+</body>
+</html>

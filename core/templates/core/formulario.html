@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green-World - Formulario</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script defer src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
+</head>
+<body class="form-main">
+
+    <main class="container-xl w-75 h-75 bg-white mt-5 rounded-3 sombra">
+        <div class="row align-items-stretch">
+            <div class="col form-bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-3">
+
+            </div>
+
+            <div class="col form-contenedor p-4 rounded-end">
+                <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-center">
+                    <a class="btn-all btn-all-mod mb-3 mb-md-0" href="index.html">Inicio</a>
+                    <img class="logo" src="img/logo.png" alt="imagen logo">
+                </div>
+
+                <h2 class="fw-bold text-center py-5">Bienvenido</h2>
+                <p class="fs-5 fw-bold text-center">Haz una donación para poder obtener una cuenta y obtener grandes descuentos</p>
+
+                <form action="#" class="needs-validation mt-2" novalidate>
+                    <div class="mb-4">
+                        <label for="nombre" class="form-label">Nombre de Usuario</label>
+                        <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required minlength="3">
+                        <span class="invalid-feedback">Debes ingresar un nombre</span>
+                        <span class="valid-feedback">!Todo Correcto¡</span>
+                    </div><!--campo-->
+
+                    <div class="mb-4">
+                        <label for="email" class="form-label">Correo Electronico</label>
+                        <input type="email" id="email" class="form-control" placeholder="Tu email" required>
+                        <span class="invalid-feedback">Debes ingresar un email valido</span>
+                        <span class="invalid-feedback">-example@example.cl</span>
+                        <span class="valid-feedback">!Todo Correcto¡</span>
+                    </div><!--campo-->
+
+                    <div class="mb-4">
+                        <label for="password" class="form-label">Crea una Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="password" required minlength="8">
+                        <span class="invalid-feedback">Debes ingresar una contraseña</span>
+                        <span class="invalid-feedback">-Minimo 8 Caracteres</span>
+                        <span class="valid-feedback">!Todo Correcto¡</span>
+                    </div><!--campo-->
+
+                    <div class="mb-4">
+                        <label for="pago" class="form-label">Agregar Donación</label>
+                        <input type="number" name="pago" class="form-control" placeholder="$5.000" required min="5000">
+                        <span class="invalid-feedback">El monto minimo es de $5000</span>
+                        <span class="valid-feedback">!Todo Correcto¡</span>
+                    </div><!--campo-->
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                    </div>
+
+                    <div class="my-3">
+                        <span><a href="#">Recupera Password</a></span>
+                    </div>
+                </form>
+            </div>
+        </div><!--row-->
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./js/main.js" type="module"></script>
+</body>
+</html>
