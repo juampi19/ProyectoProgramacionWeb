@@ -4,6 +4,7 @@
 
     <main class="container-lg py-5"> 
         <div class = "titulo text-center my-5">
+            {% load humanize %}
             <h2 class = "position-relative d-inline-block">Tienda</h2>
         </div>
         <div class="mb-5 row justify-content-center">
@@ -15,6 +16,25 @@
         <div class="productos-app row">
             <!--Productos aca-->
         </div>
+
+        {% for p in productos %}
+
+            <div class="producto-app col-md-4">
+                <div class="card">
+                    {% if p.prod_img %}
+                        <img class="card-img-top" src="{{p.prod_img.url}}" alt="Card image cap">
+                    {% endif %}
+                    <div class="card-body">
+                        <h3 class="card-title text-center">{{p.prod_nombre | title }}</h3>
+                        <p class="card-text">${{p.prod_precio | intcomma }}</p>
+                        <p class="card-text">{{p.prod_descripcion}}</p>
+                        <p class="card-text">Stock: {{p.prod_stock}} Unidades</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
     </main>
 
     {% block javascripts %}
