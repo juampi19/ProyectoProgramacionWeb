@@ -17,3 +17,7 @@ python manage.py makemigrations
 python manage.py migration
 python manage.py createsuperuser
 ```
+### Dependencias python:
+```
+pip install -r requeriments.txt
+```
