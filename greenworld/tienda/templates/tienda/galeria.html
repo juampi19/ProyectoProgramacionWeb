@@ -1,0 +1,26 @@
+{% extends 'tienda/base.html' %}
+
+    
+{% load static %}
+    
+
+{% block contenido %}
+    <main class="container-lg galeria py-5"> 
+        <div class = "titulo text-center my-5">
+            <h2 class = "position-relative d-inline-block">Escoge tu imagen</h2>
+        </div>
+        <div class="row py-5" id="app">
+            <!--imagenes-->
+        </div>
+
+        <div class="d-flex justify-content-center py-4 gap-3 flex-wrap"  id="paginacion">
+            <!--paginador-->
+        </div>
+    </main>
+
+    {% block javascripts %}
+        <script src="{% static 'tienda/js/services/galeria.provider.js' %}" type="module"></script>
+    {% endblock %}
+
+{% endblock %}
+

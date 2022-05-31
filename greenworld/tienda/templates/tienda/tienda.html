@@ -1,0 +1,24 @@
+{% extends 'tienda/base.html' %}
+{% load static %}
+{% block contenido %}
+
+    <main class="container-lg py-5"> 
+        <div class = "titulo text-center my-5">
+            <h2 class = "position-relative d-inline-block">Tienda</h2>
+        </div>
+        <div class="mb-5 row justify-content-center">
+            <div class="col-md-4">
+                <label class="text-start" for="filtrarProducto">Buscar <i class="bi bi-search"></i></label>
+            <input class="w-100"  type="text" placeholder="buscar producto" id="filtrarProducto" >
+            </div>
+        </div>
+        <div class="productos-app row">
+            <!--Productos aca-->
+        </div>
+    </main>
+
+    {% block javascripts %}
+        <script src="{% static 'tienda/js/services/productos.provider.js' %}" type="module"></script>
+    {% endblock %}
+
+{% endblock %}

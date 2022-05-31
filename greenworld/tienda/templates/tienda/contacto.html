@@ -1,0 +1,61 @@
+{% extends 'tienda/base.html' %}
+{% load static %}
+{% block contenido %}
+
+    <main class="container-xl py-5">
+        <div class = "titulo text-center my-5">
+            <h2 class = "position-relative d-inline-block">Contactanos</h2>
+        </div>
+    
+        <div class="row justify-content-center mt-5">
+            <form action="#" class="col-md-8 needs-validation formulario" novalidate>
+                <fieldset>
+                    <legend class="bg-primary text-white text-center text-uppercase fs-4 fw-bold">Tus Datos</legend>
+    
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text"  id="nombre" class="form-control" placeholder="Tu Nombre" required>
+                        <span class="invalid-feedback">Debes ingresar un nombre</span>
+                        <span class="valid-feedback">!Todo Correcto¡</span>
+                    </div>
+    
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email"  id="email" class="form-control" placeholder="Tu Email" required>
+                        <span class="invalid-feedback">Debes ingresar un email valido</span>
+                        <span class="valid-feedback">!Todo Correcto¡</span>
+                    </div>
+    
+                    <div class="mb-3">
+                        <label for="tel" class="form-label">Teléfono:</label>
+                        <input type="tel"  id="tel" class="form-control" placeholder="Tu Teléfono" required minlength="9">
+                        <span class="invalid-feedback">Debes ingresar un telefono valido</span>
+                        <span class="valid-feedback">!Todo Correcto¡</span>
+                    </div>
+    
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje:</label>
+                        <textarea id="mensaje" class="form-control" rows="10" required minlength="10"></textarea>
+                        <span class="invalid-feedback">Debes mandar un mensaje</span>
+                        <span class="valid-feedback">!Todo Correcto¡</span>
+                        
+                    </div>  
+                </fieldset><!--campos-->
+                    
+    
+                <div class="my-5 d-grid d-lg-flex justify-content-lg-center">
+                    <button class="btn-all fw-normal fs-3" type="submit">Enviar</button>
+                </div>
+               
+            </form>
+        </div>
+       
+    </main>
+
+    {% block javascripts %}
+        <script src="{% static 'tienda/js/main.js' %}" type="module"></script>
+    {% endblock %}
+
+{% endblock %}
+    
+    
