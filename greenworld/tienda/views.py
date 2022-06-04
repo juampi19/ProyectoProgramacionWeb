@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Producto
-from .forms import ProductoForm
+from .forms import ProductoForm, ContactoForm
 
 # Create your views here.
 
@@ -12,7 +12,18 @@ def tienda(request):
     return render(request, 'tienda/tienda.html', {'productos': productos})
 
 def contacto(request):
-    return render(request, 'tienda/contacto.html')
+    data = {
+        'form2': ContactoForm()
+    }
+    if request.method == 'POST':
+        form = ContactoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+        else:
+            data['form'] = form
+    return render(request, 'tienda/contacto.html', data)
+    
 
 def galeria(request):
     return render(request, 'tienda/galeria.html')
@@ -76,3 +87,4 @@ def eliminar_producto(request, id):
     producto.delete()
     return redirect(to="listar_productos")
 
+# Probando contacto

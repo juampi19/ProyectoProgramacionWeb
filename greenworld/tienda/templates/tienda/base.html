@@ -17,7 +17,7 @@
    
     <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 sticky-top shadow">
         <div class = "container-xl d-flex flex-column flex-md-row gap-4 justify-content-center justify-content-md-evenly">
-            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "index.html">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "{% static 'tienda/img/logo.png' %}">
                 <img class="img-fluid" src="{% static 'tienda/img/logo.png' %}" alt="imagen logo">
             </a>
 
@@ -55,6 +55,9 @@
                     <li class = "nav-item px-2 py-2">
                         <a class = "nav-link text-uppercase text-dark" href ="{% url 'contacto' %}">Contacto</a>
                     </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href ="{% url 'listar_productos' %}">Formulario</a>
+                    </li>
                 </ul>
             </div>
         </div><!--container-->
@@ -74,10 +77,10 @@
                 </div>
     
                 <nav class="nav-footer">
-                    <a class="text-decoration-none fw-bold" href="index.html">Inicio</a>
+                    <a class="text-decoration-none fw-bold" href="{% url 'index' %}">Inicio</a>
                     <a class="text-decoration-none fw-bold" href="nosotros.html">Nosotros</a>
-                    <a class="text-decoration-none fw-bold" href="tienda.html">Tienda</a>
-                    <a class="text-decoration-none fw-bold" href="galeria.html">Galería</a>
+                    <a class="text-decoration-none fw-bold" href="{% url 'galeria' %}">Tienda</a>
+                    <a class="text-decoration-none fw-bold" href="{% url 'galeria' %}">Galería</a>
                 </nav>
             </div>
     
