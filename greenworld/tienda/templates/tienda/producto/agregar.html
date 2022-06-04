@@ -10,7 +10,10 @@
 
         <div class="card">
             <div class="card-body"> 
-                <h2>Agregar Producto</h2><hr>
+                <div class="d-md-flex justify-content-between">
+                    <h2>Agregar Producto</h2>
+                    <a class="d-md-flex align-items-center  btn-primary text-decoration-none rounded-2 fs-4 px-3" href="{% url 'listar_productos' %}">volver</a>
+                </div><hr>
             <form action="" method="post" enctype="multipart/form-data">
                     
                     {% csrf_token %}

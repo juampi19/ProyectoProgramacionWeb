@@ -1,16 +1,17 @@
 {% extends 'tienda/base.html' %}
 {% load static %}
 {% block contenido %}
-
+{% load crispy_forms_tags %}
     <main class="container-xl py-5">
         <div class = "titulo text-center my-5">
             <h2 class = "position-relative d-inline-block">Contactanos</h2>
         </div>
     
         <div class="row justify-content-center mt-5">
-            <form action="#" method="post" class="col-md-8 formulario" novalidate>
-                 {% csrf_token %}   
-                {{ form2 }}
+            <form action="#" method="post" class="col-md-8 formulario-contacto" novalidate>
+
+                {% csrf_token %}   
+                {{ form2 | crispy }}
 
 
                 <div class="my-5 d-grid d-lg-flex justify-content-lg-center">
@@ -18,6 +19,7 @@
                 </div>
                
             </form>
+            {{mensaje}}
         </div>
        
     </main>

@@ -417,6 +417,15 @@ p {
     background-position: center left;
 }
 
-.formulario label {
+.formulario-contacto label {
     display: block !important;
+}
+
+.formulario-contacto input, textarea {
+    width: 100%;
+}
+
+/*alertas*/
+.swal2-html-container {
+    font-size: 2rem !important;
 }
