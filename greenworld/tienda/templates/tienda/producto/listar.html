@@ -1,0 +1,36 @@
+{% extends 'tienda/base.html' %}
+
+{% block contenido %}
+{% load humanize %}
+<br>
+<div class="card">
+    <div class="card-body">
+        <h2>Listado de Productos</h2>
+        <hr>
+        <table class="table table-striped table-hover table-responsive-sm">
+            <tr>
+                <th>Nombre Producto</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Opciones</th>
+            </tr>
+        
+            {% for p in productos %}
+            <tr>
+                <td>{{ p.prod_nombre | title }}</td>
+                <td>${{ p.prod_precio | intcomma }}</td>
+                <td>{{ p.prod_stock | intcomma }}</td>
+                <td>
+                    <a href="{% url 'modificar_producto' p.id %}" class="btn btn-info btn-sm">modificar</a>
+                    <a href="{% url 'eliminar_producto' p.id %}" class="btn btn-danger btn-sm">eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        
+        </table>
+    </div>
+</div>
+<br><br><br>
+
+
+{% endblock %}

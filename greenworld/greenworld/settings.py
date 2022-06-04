@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'tienda.apps.TiendaConfig',
     "colorfield",
     "django.contrib.humanize",
+    'crispy_forms',
 ]
 
 X_FRAME_OPTIONS = "SAMEORIGIN"

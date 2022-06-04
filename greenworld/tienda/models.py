@@ -16,6 +16,8 @@ class Producto(models.Model):
     prod_descripcion = models.TextField()
     prod_stock = models.IntegerField()
     prod_img = models.ImageField(upload_to='productos/', null=True, blank=True)
+    #prod_fecha = models.DateField()
+
     def __str__(self):
         return self.prod_nombre
 
