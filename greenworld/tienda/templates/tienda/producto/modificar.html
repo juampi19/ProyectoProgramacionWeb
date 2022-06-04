@@ -19,7 +19,8 @@
                 <div class="d-flex justify-content-end">
                         <input type="submit" value="Editar" class="btn btn-primary">
                         &nbsp;
-                        <input type="reset" value="cancelar" class="btn btn-secundary">
+                        <a href="{% url 'listar_productos' %}" class="btn btn-secundary fs-4">cancelar</a>
+                        
                 </div>
             </form>
             {{mensaje}}
