@@ -11,11 +11,11 @@
             <form action="#" method="post" class="col-md-8 formulario-contacto needs-validation" novalidate>
 
                 {% csrf_token %}   
-                {{ form2 | crispy }}
+                {{ form | crispy }}
 
 
                 <div class="my-5 d-grid d-lg-flex justify-content-lg-center">
-                    <button class="btn-all fw-normal fs-3" type="submit">Enviar</button>
+                    <input class="btn-all fw-normal fs-3" type="submit" value="Ingresar">
                 </div>
                
             </form>
