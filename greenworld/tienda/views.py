@@ -3,6 +3,8 @@ from .models import Producto
 from .forms import ProductoForm, ContactoForm
 # importar los mensajes
 from django.contrib import messages
+from django.core.paginator import Paginator
+from django.http import Http404
 
 # Create your views here.
 
@@ -44,6 +46,7 @@ def agregar_producto(request):
     :return: The data dictionary is being returned.
     """
 
+
     data = {
         'form': ProductoForm()
     }
@@ -67,8 +70,18 @@ def listar_productos(request):
     :return: A list of all the products in the database.
     """
     productos = Producto.objects.all()
+    page = request.GET.get('page', 1)
+
+    try:
+        paginator = Paginator(productos, 4)
+        productos = paginator.page(page)
+    except:
+        raise Http404("No existe la página")
+
+
     data = {
-        'productos': productos
+        'entity': productos,
+        'paginator': paginator,
     }
     return render(request, 'tienda/producto/listar.html', data)
 

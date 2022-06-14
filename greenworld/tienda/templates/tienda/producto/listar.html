@@ -41,7 +41,7 @@
                 <th>Opciones</th>
             </tr>
         
-            {% for p in productos %}
+            {% for p in entity %}
             <tr>
                 <td>{{ p.prod_nombre | title }}</td>
                 <td>${{ p.prod_precio | intcomma }}</td>
@@ -54,6 +54,12 @@
             {% endfor %}
         
         </table>
+        
+        <hr>
+        <div>
+            {% include 'tienda/paginator.html' %}
+        </div>
+
     </div>
 </div>
 <br><br><br>
