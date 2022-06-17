@@ -375,6 +375,12 @@ p {
     padding: .8rem 3rem;     
 }
 
+.btn-all-login{
+    background-color: var(--bs-green2);
+    font-size: 1.2rem;
+    padding: 1.2rem 2rem;
+}
+
 .paginacion {
     border-radius: 50%;
     background-color: #FFFFFF;

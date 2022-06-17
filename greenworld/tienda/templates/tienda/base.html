@@ -66,6 +66,7 @@
         </div><!--container-->
     </nav><!--navbar-->
 
+    <!--modal login-->
     <div class="modal fade" id="modal">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -75,12 +76,13 @@
             <div class="modal-body">
                 {% if request.user.is_authenticated %}
                     <p class="text-center fw-bold">Bienvenido {{ request.user.username }}</p>
-                        <li class = "nav-item px-2 py-2 list-unstyled btn-all">
-                            <a class = "nav-link text-uppercase text-dark" href ="{% url 'logout' %}">Logout</a>
+                        <li class = "nav-item px-2 py-2 list-unstyled d-flex justify-content-center">
+                            <a class = "nav-link text-uppercase text-dark btn-all btn-all-login" href ="{% url 'logout' %}">Cerrar Sesión</a>
                         </li>
                     {% else %}
-                        <li class = "nav-item px-2 py-2 list-unstyled btn-all">
-                            <a class = "nav-link text-uppercase text-dark" href ="{% url 'login' %}">Login</a>
+                        <li class = "px-2 py-2 list-unstyled d-flex flex-column flex-md-row justify-content-center gap-2">
+                            <a class = "text-uppercase text-dark text-decoration-none btn-all btn-all-login" href ="{% url 'login' %}">Iniciar Sesión</a>
+                            <a class = "text-uppercase text-dark text-decoration-none btn-all btn-all-login" href ="{% url 'registro' %}">Registrar Usuario</a>
                         </li>
                     {% endif %}
             </div>
