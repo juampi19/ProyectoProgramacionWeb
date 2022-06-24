@@ -15,7 +15,6 @@
 <body class="form-main">
     {% load crispy_forms_tags %}
     <br>
-    <br>
     <main class="container-xl bg-white mt-5 rounded-3 sombra">
         <div class="row align-items-stretch">
             <div class="form-bg d-none d-md-block col-md-6 col-lg-5 col-xl-6 rounded-3">
@@ -35,7 +34,10 @@
                     {% csrf_token %}
                     {{ form | crispy }}
 
-                    <input type="submit" value="Ingresar" class="btn-all mt-5 float-end">
+                    <div class="mt-4 d-flex flex-column flex-md-row-reverse justify-content-md-between gap-4">
+                        <input type="submit" value="Ingresar" class="btn-all">
+                        <a class="btn-all" href="{% url 'registro' %}">Registrarme</a>
+                    </div>
                 </form>
                 
             </div>

@@ -17,11 +17,11 @@
    
     <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 sticky-top shadow">
         <div class = "container-xl d-flex flex-column flex-md-row gap-4 justify-content-center justify-content-md-evenly">
-            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "{% static 'tienda/img/logo.png' %}">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "{% url 'index' %}">
                 <img class="img-fluid" src="{% static 'tienda/img/logo.png' %}" alt="imagen logo">
             </a>
 
-            <div class = "order-lg-2 nav-btns d-flex gap-5 ms-5 ms-md-0">
+            <div class = "order-lg-2 nav-btns d-flex gap-5 ms-md-0">
                 <button type = "button" class = "btn position-relative" data-bs-toggle="modal" data-bs-target="#modal">
                     <i class="bi bi-person-circle"></i>
                 </button>
@@ -57,10 +57,13 @@
                     <li class = "nav-item px-2 py-2">
                         <a class = "nav-link text-uppercase text-dark" href ="{% url 'contacto' %}">Contacto</a>
                     </li>
-                    <li class = "nav-item px-2 py-2">
-                        <a class = "nav-link text-uppercase text-dark" href ="{% url 'listar_productos' %}">Formulario</a>
-                    </li>
-
+                    {% if user.is_authenticated %}
+                        {% if perms.tienda.add_producto %}
+                        <li class = "nav-item px-2 py-2">
+                            <a class = "nav-link text-uppercase text-dark" href ="{% url 'listar_productos' %}">Formulario</a>
+                        </li>
+                        {% endif %}
+                    {% endif %}
                 </ul>
             </div>
         </div><!--container-->

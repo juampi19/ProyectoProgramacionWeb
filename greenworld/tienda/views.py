@@ -7,8 +7,18 @@ from django.core.paginator import Paginator
 from django.http import Http404
 ## Autenticacion de usuarios
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required, permission_required
+from rest_framework import viewsets
+from .serializers import ProductoSerializer
 
-# Create your views here.
+#Views para la api
+class ProductoViewset(viewsets.ModelViewSet):
+    queryset = Producto.objects.all()
+    serializer_class = ProductoSerializer
+
+#tienda api
+def tienda2( request ):
+    return render( request, 'tienda/tienda2.html' )
 
 def index(request):
     return render(request, 'tienda/index.html')
@@ -37,6 +47,7 @@ def galeria(request):
 def formulario(request):
     return render(request, 'tienda/formulario.html') 
 
+@permission_required('tienda.add_producto')
 def agregar_producto(request):
     """
     If the request is a POST request, then validate the form and save it if it's valid, otherwise return
@@ -62,6 +73,7 @@ def agregar_producto(request):
 
     return render(request, 'tienda/producto/agregar.html', data)
 
+@permission_required('tienda.view_producto')
 def listar_productos(request):
     """
     It takes a request, gets all the products, and returns a rendered template with the products
@@ -86,6 +98,7 @@ def listar_productos(request):
     }
     return render(request, 'tienda/producto/listar.html', data)
 
+@permission_required('tienda.change_producto')
 def modificar_producto(request, id):
     producto = get_object_or_404(Producto, id=id)
     data = {
@@ -100,6 +113,7 @@ def modificar_producto(request, id):
         data["form"]  = formulario
     return render(request, 'tienda/producto/modificar.html', data)
 
+@permission_required('tienda.delete_producto')
 def eliminar_producto(request, id):
     producto = get_object_or_404(Producto, id=id)
     producto.delete()

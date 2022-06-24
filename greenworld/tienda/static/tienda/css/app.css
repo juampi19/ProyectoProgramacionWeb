@@ -135,6 +135,7 @@ p {
     background-image: linear-gradient( rgb( 0 0 0/50% ) 0%, rgb( 0 0 0/50% ) 100% ), url( ../img/hover-imagen.jpg );
     height: 100vh;
     background-position: center center;
+    background-size: cover;
 }
 
 .hero-heading {
