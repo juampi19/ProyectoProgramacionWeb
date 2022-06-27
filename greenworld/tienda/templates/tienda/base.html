@@ -27,8 +27,25 @@
                 </button>
 
 
-                <button type = "button" class = "btn position-relative">
+                <button type = "button" class = "btn position-relative submenu">
                     <i class = "fa fa-shopping-cart"></i>
+                    <div id="carrito">
+                                    
+                        <table id="lista-carrito" class="w-100 p-5">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+
+                        <a href="#" id="vaciar-carrito" class="btn btn-danger fs-4">Vaciar Carrito</a>
+                    </div> 
                 </button>
                 
                 <button type = "button" class = "btn position-relative">
@@ -50,6 +67,9 @@
                     </li>
                     <li class = "nav-item px-2 py-2">
                         <a class = "nav-link text-uppercase text-dark" href ="{% url 'tienda' %}">Tienda</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href ="{% url 'tienda2' %}">Tienda</a>
                     </li>
                     <li class = "nav-item px-2 py-2">
                         <a class = "nav-link text-uppercase text-dark" href ="{% url 'galeria' %}">Galeria</a>

@@ -436,3 +436,34 @@ p {
 .swal2-html-container {
     font-size: 2rem !important;
 }
+
+/*carrito*/
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+}
+
+@media ( min-width: 768px ) {
+    .submenu:hover #carrito{
+        display: block;
+        position: absolute;
+        right:0;
+    
+        top:100%;
+        z-index: 1;
+        background-color: white;
+        padding: 20px;
+        min-height: 400px;
+        min-width: 300px;
+    }
+    .vacio {
+        padding: 10px;
+        background-color: crimson;
+        text-align: center;
+        border-radius: 10px;
+        color: white;
+    }
+}
