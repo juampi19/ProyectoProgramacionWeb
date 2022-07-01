@@ -16,6 +16,8 @@ class Producto(models.Model):
     prod_descripcion = models.TextField()
     prod_stock = models.IntegerField()
     prod_img = models.ImageField(upload_to='productos/', null=True, blank=True)
+    #prod_fecha = models.DateField()
+
     def __str__(self):
         return self.prod_nombre
 
@@ -35,3 +37,14 @@ class DetalleVenta(models.Model):
 
     def __str__(self):
         return str(self.pk)
+
+
+##Prueba para contacto
+class Contacto(models.Model):
+    nombre = models.CharField(max_length=50)
+    email = models.EmailField()
+    telefono = models.CharField(max_length=10)
+    mensaje = models.TextField()
+
+    def __str__(self):
+        return self.nombre

@@ -11,101 +11,22 @@
     </section>
     
     <section id = "productos-nuevos" class = "py-5">
-        <div class = "container">
+        <div class = "container-xl">
             <div class = "titulo text-center my-5">
                 <h2 class = "position-relative d-inline-block">Nuevos Productos</h2>
             </div>
 
             <div class = "row gap-4">
 
-                <div class = "productos-contenedor mt-4 row gx-0 gy-3">
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
-                        <div class = "position-relative">
-                            <img src = "{% static 'tienda/img/producto-nuevo1.png' %}" class = "w-100">
-                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">nuevo</span>
-                        </div>
-                        <div class = "text-center">
-                            <p class = "text-capitalize my-1">Maceteros de Piedra</p>
-                            <span class = "fw-bold">$ 10.999</span>
-                        </div>
+                <div class="mb-5 row justify-content-center">
+                    <div class="col-md-4">
+                        <label class="text-start" for="filtrarProducto">Buscar <i class="bi bi-search"></i></label>
+                    <input class="w-100"  type="text" placeholder="buscar producto" id="filtrarProducto" >
                     </div>
+                </div>
 
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
-                        <div class = "position-relative">
-                            <img src = "{% static 'tienda/img/producto-nuevo2.png' %}" class = "w-100">
-                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">nuevo</span>
-                        </div>
-                        <div class = "text-center">
-                            <p class = "text-capitalize my-1">Maceteros de Animales</p>
-                            <span class = "fw-bold">$ 5.000</span>
-                        </div>
-                    </div>
-
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
-                        <div class = "position-relative">
-                            <img src = "{% static 'tienda/img/producto-nuevo3.png' %}" class = "w-100">
-                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">nuevo</span>
-                        </div>
-                        <div class = "text-center">
-                            <p class = "text-capitalize my-1">Bonsai mediterraneo</p>
-                            <span class = "fw-bold">$ 35.000</span>
-                        </div>
-                    </div>
-
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
-                        <div class = "position-relative">
-                            <img src = "{% static 'tienda/img/producto-nuevo5.png' %}" class = "w-100">
-                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">nuevo</span>
-                        </div>
-                        <div class = "text-center">
-                            <p class = "text-capitalize my-1">kit de herramientas</p>
-                            <span class = "fw-bold">$ 16.990</span>
-                        </div>
-                    </div>
-
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
-                        <div class = "position-relative">
-                            <img src = "{% static 'tienda/img/producto-nuevo6.png' %}" class = "w-100">
-                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">nuevo</span>
-                        </div>
-                        <div class = "text-center">
-                            <p class = "text-capitalize my-1">gray shirt</p>
-                            <span class = "fw-bold">$ 45.50</span>
-                        </div>
-                    </div>
-
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
-                        <div class = "position-relative">
-                            <img src = "{% static 'tienda/img/producto-nuevo7.png' %}" class = "w-100">
-                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">nuevo</span>
-                        </div>
-                        <div class = "text-center">
-                            <p class = "text-capitalize my-1">podadora de manos</p>
-                            <span class = "fw-bold">$ 24.000</span>
-                        </div>
-                    </div>
-
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
-                        <div class = "position-relative">
-                            <img src = "{% static 'tienda/img/producto-nuevo9.png' %}" class = "w-100">
-                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">nuevo</span>
-                        </div>
-                        <div class = "text-center">
-                            <p class = "text-capitalize my-1">Planta Medinilla</p>
-                            <span class = "fw-bold">$ 30.000</span>
-                        </div>
-                    </div>
-
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
-                        <div class = "position-relative">
-                            <img src = "{% static 'tienda/img/nuevo-producto8.png' %}" class = "w-100">
-                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">nuevo</span>
-                        </div>
-                        <div class = "text-center">
-                            <p class = "text-capitalize my-1">Regadera de jardín</p>
-                            <span class = "fw-bold">$ 13.000</span>
-                        </div>
-                    </div>
+                <div class = "productos-app mt-4 row">
+                    
                 </div>
             </div><!--row-->
 
@@ -340,5 +261,9 @@
         </div>
 
     </section>
+
+    {% block javascripts %}
+        <script src="{% static 'tienda/js/services/productos.provider.js' %}" type="text/javascript"></script>
+    {% endblock %}
 
 {% endblock %}  

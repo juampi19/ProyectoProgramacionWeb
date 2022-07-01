@@ -30,6 +30,7 @@ class Migration(migrations.Migration):
                 ('prod_precio', models.IntegerField()),
                 ('prod_descripcion', models.TextField()),
                 ('prod_stock', models.IntegerField()),
+                #('prod_fecha', models.DateField()),
             ],
         ),
         migrations.CreateModel(
