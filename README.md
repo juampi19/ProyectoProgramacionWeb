@@ -10,3 +10,14 @@ E-COMMERCE DE JARDINERIA:  https://github.com/juampi19/ProyectoProgramacionWeb
 SERVIDOR DESDE HEROKU:     https://productos-api-rest.herokuapp.com/productos
 HOSTING DE LA PAGINA:      https://green-wood.netlify.app/
 ```
+### Comandos Python:
+```
+python manage.py runserver
+python manage.py makemigrations
+python manage.py migration
+python manage.py createsuperuser
+```
+### Dependencias python:
+```
+pip install -r requeriments.txt
+```
