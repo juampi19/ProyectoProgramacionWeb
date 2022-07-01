@@ -1,0 +1,38 @@
+{% extends 'tienda/base.html' %}
+{% load static %}
+{% block contenido %}
+
+{% load crispy_forms_tags %}
+
+<br><br>
+<div class="row">
+    <div class="col-12 col-md-6 offset-md-3">
+
+        <div class="card">
+            <div class="card-body"> 
+                <div class="d-md-flex justify-content-between">
+                    <h2>Agregar Producto</h2>
+                    <a class="d-md-flex align-items-center  btn-primary text-decoration-none rounded-2 fs-4 px-3" href="{% url 'listar_productos' %}">volver</a>
+                </div><hr>
+            <form action="" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+                    
+                    {% csrf_token %}
+                    {{ form | crispy }}
+
+                <div class="d-flex justify-content-end">
+                        <input type="submit" value="guardar" class="btn btn-primary">
+                        &nbsp;
+                        <input type="reset" value="cancelar" class="btn btn-secundary">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    </div>
+</div>
+
+{% block javascripts %}
+<script src="{% static '../tienda/js/main.js' %}" type="module"></script>
+{% endblock %}
+
+{% endblock %}

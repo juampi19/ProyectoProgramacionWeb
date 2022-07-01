@@ -1,0 +1,32 @@
+{% extends 'tienda/base.html' %}
+{% load static %}
+{% block contenido %}
+{% load crispy_forms_tags %}
+    <main class="container-xl py-5">
+        <div class = "titulo text-center my-5">
+            <h2 class = "position-relative d-inline-block">Contactanos</h2>
+        </div>
+    
+        <div class="row justify-content-center mt-5">
+            <form action="#" method="post" class="col-md-8 formulario-contacto needs-validation" novalidate>
+
+                {% csrf_token %}   
+                {{ form | crispy }}
+
+
+                <div class="my-5 d-grid d-lg-flex justify-content-lg-center">
+                    <input class="btn-all fw-normal fs-3" type="submit" value="Ingresar">
+                </div>
+               
+            </form>
+        </div>
+       
+    </main>
+
+    {% block javascripts %}
+        <script src="{% static 'tienda/js/main.js' %}" type="module"></script>
+    {% endblock %}
+
+{% endblock %}
+    
+    

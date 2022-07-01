@@ -1,0 +1,4 @@
+pillow
+django-admin-interface
+django-crispy-forms
+django-rest-framework

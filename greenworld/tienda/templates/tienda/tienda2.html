@@ -1,0 +1,19 @@
+{% extends 'tienda/base.html' %}
+{% load static %}
+{% block contenido %}
+{% load humanize %}
+    <main class="container-lg py-5"> 
+        <div class = "titulo text-center my-5">
+            
+            <h2 class = "position-relative d-inline-block">Tienda</h2>
+        </div>
+        
+        <div class="api-root">
+        </div>
+    </main>
+
+    {% block javascripts %}
+    <script src="{% static 'tienda/js/RestApi/productosApi.js' %}" type="module"></script>
+    {% endblock %}
+
+{% endblock %}
